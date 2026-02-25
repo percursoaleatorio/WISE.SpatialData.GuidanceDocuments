@@ -49,6 +49,7 @@ imgmath_latex = 'latex'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_rtd_theme'
+html_show_copyright = False
 # The _static folder is where you place files that should be copied as-is to your final build output (_build/html/_static). It is commonly used for:
 # Custom.css: To override the default theme colors or fonts.
 # Logos/Favicons: Images referenced directly in your theme configuration.
