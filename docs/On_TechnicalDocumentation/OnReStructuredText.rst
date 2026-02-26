@@ -369,15 +369,15 @@ They look like this::
    True   True   True
    =====  =====  =======
 
-   .. tip:: This is a tip.
+.. tip:: This is a tip.
+
+   These are the basic types of tables, which are rather clumsy. 
+   Also available (and easier to use) are :ref:`special tables <rst-specialtables-ref>`, 
+   namely list-tables and CSV-tables.
    
-      These are the basic types of tables, which are rather clumsy. 
-      Also available (and easier to use) are :ref:`special tables <rst-specialtables-ref>`, 
-      namely list-tables and CSV-tables.
-      
-      An xlsxtable_ extension can also be used with Sphinx_.
-      It allows the inclusion of EXCEL or ODS spreadsheets, 
-      or part of them, into a reST document.
+   An xlsxtable_ extension can also be used with Sphinx_.
+   It allows the inclusion of EXCEL or ODS spreadsheets, 
+   or part of them, into a reST document.
 
 .. _rst-hyperlinks-ref:
 
@@ -624,22 +624,24 @@ Images
 
 reST supports an image directive, used like so::
 
-   .. image:: gnu.png
-      (options)
+   .. image:: myImage.png
+      :width: 100%
+      :align: middle
 
-The file name given (here ``gnu.png``)
-must either be relative to the source file,
+The filename must either be relative to the source file,
 or absolute (which means that they are relative to the top source directory).
 
-For example, the file ``sketch/spam.rst``
-could refer to the image ``images/spam.png``
-as ``../images/spam.png``
-or as ``/images/spam.png``.
+.. tip:
 
-The image size options (``width`` and ``height``)
-should be specified in points (``pt``),
-as that will best support output to different formats
-(``HTML``, ``LaTeX``).
+   It is possible to use substitutions with images.
+   For example, defining the following substitution::
+
+      .. |myImage| image:: this-is-an-image-that-is-used-multiple-times.png
+      :width: 10%
+      :align: middle
+
+   Allows the use of ``|myImage|`` repeatedly in the document, 
+   always with the same formatting.
 
 .. _rst-figures-ref:
 
@@ -673,6 +675,11 @@ and an optional legend (arbitrary body elements)::
 There must be blank lines before the caption paragraph and before the legend.
 To specify a legend without a caption,
 use an empty comment (``..``) in place of the caption.
+
+.. tip:
+
+   It is **NOT** possible to use substitutions with figures...
+   
 
 .. _rst-specialtables-ref:
 
