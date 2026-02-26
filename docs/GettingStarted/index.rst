@@ -136,7 +136,8 @@ Sphinx
 `Sphinx`_ is a Python documentation generator.
 
 If your using the `wiseEnvironment` Conda environment, Sphinx_ should already be installed.
-The `wiseEnvironment` includes the `sphinx-autobuild` package, which allows you to automatically rebuild and preview your documentation in a web browser as you edit it (see next section).
+The `wiseEnvironment` includes the `sphinx-autobuild` package, 
+which allows you to automatically rebuild and preview your documentation in a web browser as you edit it (see next section).
 
 ..
    The Sphinx builder can produce a number of output formats (e.g. HTML, PDF).
