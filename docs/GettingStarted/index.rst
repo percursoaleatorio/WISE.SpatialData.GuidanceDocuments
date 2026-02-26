@@ -96,6 +96,14 @@ to and from reStructuredText_ and Markdown_ (including the CommonMark_ flavour s
 You can use it to convert existing documents to `*.rst` or `*.md` format,
 before editing them with a text or code editor (e.g. Notepad++, Visual Studio Code).
 
+   .. code-block:: bash
+
+      pandoc --from=docx --to=rst --output=myfile.rst --extract-media=img myfile.docx  
+
+Refer to https://pandoc.org/MANUAL.html for a full list of options (besides the ones listed below).
+
+.. include:: pandocQuickReference.txt
+
 Notepad++
 ------------------
 
@@ -103,8 +111,7 @@ Notepad++
 It is only available for **Windows**.
 
 reStructuredText and Markdown are not among the languages natively recognised by Notepad++,
-but can be added using a `Notepad++ User Defined Language File`_
-(see install instructions below the list of available language files).
+but can be added using the `Notepad++ User Defined Languages Collection`_.
 
 * Follow the link to download the `Notepad++ ReST syntax file`_.
 * Follow the link to download the `Notepad++ Markdown syntax file`_.
