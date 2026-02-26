@@ -2,7 +2,7 @@
 
 This project uses [Conda](https://docs.conda.io/en/latest/) to manage its dependencies and ensure a reproducible workflow. 
 
-All required packages for data analysis, bioinformatics, and documentation are specified in the [environment.yml](./src/environment.yml) file.
+All required packages for data analysis, bioinformatics, and documentation are specified in the [environment.yml](./docs/GettingStarted/src/environment.yml) file.
 
 ### Prerequisites
 
@@ -105,7 +105,7 @@ The best way to do this is by setting up a GitHub Actions workflow that automati
 **1. Create a GitHub Actions workflow:**
 Create a new configuration file in your repository at `.github/workflows/documentation.yml`.
 
-Use the configuration  in the [documentation.yml](./src/documentation.yml) file.
+Use the configuration  in the [documentation.yml](./docs/GettingStarted/src/documentation.yml) file.
 
 **2. Configure your repository settings:**
 Once the action runs for the first time, it will create a new branch called `gh-pages`.
