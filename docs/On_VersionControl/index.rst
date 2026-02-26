@@ -18,6 +18,7 @@ That will change...
    OnVersionControl
    UsingGit
    UsingAnOnlineGitRepository
+   GeneratingTokens
 
 .. links-placeholder
 
