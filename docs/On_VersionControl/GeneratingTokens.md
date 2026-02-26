@@ -2,7 +2,7 @@
 
 Using a **Personal Access Token** or PAT is the standard way to authenticate when using the command line or the API. GitHub now offers two types: **Fine-grained** (recommended) and **Classic**.
 
-## 1. Navigate to Developer Settings
+## 1. Navigate to Developer Settings\
 
 1. Log in to your GitHub account.
 2. Click your **profile photo** in the top-right corner and select **Settings**.
