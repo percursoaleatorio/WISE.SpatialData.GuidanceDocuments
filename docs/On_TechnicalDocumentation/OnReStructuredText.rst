@@ -631,17 +631,6 @@ reST supports an image directive, used like so::
 The filename must either be relative to the source file,
 or absolute (which means that they are relative to the top source directory).
 
-.. tip:
-
-   It is possible to use substitutions with images.
-   For example, defining the following substitution::
-
-      .. |myImage| image:: this-is-an-image-that-is-used-multiple-times.png
-      :width: 10%
-      :align: middle
-
-   Allows the use of ``|myImage|`` repeatedly in the document, 
-   always with the same formatting.
 
 .. _rst-figures-ref:
 
@@ -675,11 +664,7 @@ and an optional legend (arbitrary body elements)::
 There must be blank lines before the caption paragraph and before the legend.
 To specify a legend without a caption,
 use an empty comment (``..``) in place of the caption.
-
-.. tip:
-
-   It is **NOT** possible to use substitutions with figures...
-   
+  
 
 .. _rst-specialtables-ref:
 
@@ -755,7 +740,7 @@ location, and add the footnote body at the bottom of the document after a
 You can also explicitly number the footnotes (``[1]_``) or use auto-numbered
 footnotes without names (``[#]_``).
 
-   .. tip:: This is a tip.
+   .. tip:: 
 
       To facilitate editing, auto-numbered footnotes should **not** be used. 
       Instead, use short descriptive names (that simplify cross-referencing).    
@@ -779,7 +764,7 @@ the citations are "global",
 meaning that every citation can be referenced from any .rst files.
 In this case, a separate file may be created (e.g. a ``references.rst`` file).
 
-   .. tip:: This is a tip.
+   .. tip:: 
 
       See :ref:`rst-biblio-ref` for further information.
    
@@ -820,13 +805,19 @@ and the ``.txt`` file extension for the files which are to be included.
       guaranteeing the consistency of the document translation 
       with the software's human user interface.
 
-
    .. warning::
 
       Substitutions do NOT work inside directives (or inside the options of a directive).
       
       Do not try to google for a solution (...been there). 
       It is a design limitation: RST markup can not be nested. Period.
+
+   .. warning::
+
+      Substitutions can be used with the ``image`` directive, 
+      which is an inline element.
+      Substitutions can **not** be used with the ``figure`` directive, 
+      which creates a block-level element.
 
 .. _rst-comments-ref:
 
