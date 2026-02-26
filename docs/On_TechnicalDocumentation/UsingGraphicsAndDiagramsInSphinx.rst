@@ -27,15 +27,11 @@ Creating diagrams
    :depth: 3
    :local:
 
-.. warning:: 
-   
-   This page is a work in progress. 
-   Examples will be added soon.
 
 Using Mermaid
 ==============
 
-This extension allows you to embed Mermaid_ graphs in your documents, including general flowcharts, sequence diagrams, gantt diagrams and more.
+The sphinxcontrib-mermaid_ extension allows you to embed Mermaid_ graphs in your documents, including general flowcharts, sequence diagrams, gantt diagrams and more.
 
 It adds a directive to embed mermaid markup. 
 
@@ -115,80 +111,6 @@ This class diagram...
 .. literalinclude:: UsingGraphicsAndDiagramsInSphinx.rst
    :start-after: block_begin_202602251652
    :end-before: block_end_202602251652
-
-Using Graphviz
-==============
-
-Besides using raster images (PNG, JPG, etc.),
-diagrams can be included with
-the `sphinx.ext.graphviz`_ extension.
-
-Graphviz_ is an open source graph visualisation software.
-Graph visualisation is a way of representing structural information
-as diagrams of abstract graphs and networks.
-
-The Graphviz extension is included with Sphinx,
-but must be enabled in the ``conf.py`` file::
-
-   extensions = ['sphinx.ext.graphviz']
-   
-
-Simple graph example
---------------------
-
-This simple graph...
-
-.. _block_begin_202602251653:
-
-.. graphviz::
-
-   digraph {
-      "From" -> "To";
-   }
-
-.. _block_end_202602251653:
-
-...is created by this block of code:
-
-.. literalinclude:: UsingGraphicsAndDiagramsInSphinx.rst
-   :start-after: block_begin_202602251653
-   :end-before: block_end_202602251653
-
-Graph with colourful shapes example
------------------------------------
-  
-This graph with different shapes and styles for each node:
-
-.. _block_begin_202602251654:
-
-.. graphviz::
-
-   digraph Flatland {
-   
-      a -> b -> c -> g; 
-      a  [shape=polygon,sides=4]
-      b  [shape=polygon,sides=5]
-      c  [shape=polygon,sides=6]
-   
-      g [peripheries=3,color=yellow];
-      s [shape=invtriangle,peripheries=1,color=red,style=filled];
-      w [shape=triangle,peripheries=1,color=blue,style=filled];
-      
-      }
-
-.. _block_end_202602251654:
-
-...is created by this block of code:
-
-.. literalinclude:: UsingGraphicsAndDiagramsInSphinx.rst
-   :start-after: block_begin_202602251654
-   :end-before: block_end_202602251654
-
-More examples are available online:
-
-*  https://en.wikipedia.org/wiki/DOT_(graph_description_language)
-*  http://www.graphviz.org/pdf/dotguide.pdf
-*  http://graphs.grevian.org
 
 
 .. links-placeholder

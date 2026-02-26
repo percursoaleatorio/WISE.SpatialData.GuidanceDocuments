@@ -7,12 +7,14 @@ This chapter covers three topics:
 * How to build and view the documentation locally, using Sphinx_.
 * How to publish the documentation online using GitHub_ Pages and GitHub Actions.
 
-.. warning::
+It also works as a quick reference in case you don't remember a step in the process.
 
-   If you are an end user (a.k.a. a *"thematic"*) this is not the page you're looking for :-) 
+   .. warning::
 
-   This documentation is intended for developers and contributors 
-   who are responsible for creating and maintaining the documentation for WISE dataflows and projects.
+      If you are an end user (a.k.a. a *"thematic"*) this is not the page you're looking for :-) 
+
+      This documentation is intended for developers and contributors 
+      who are responsible for creating and maintaining the documentation for WISE dataflows and projects.
 
 
 .. contents:: On this page...
@@ -77,23 +79,74 @@ Writing documentation
 
    If you are a developer working on WISE documentation, you can use `sphinx-autodoc2` for automatic docstring generation.
 
-*  All you need is `Notepad++_` or any text editor of your choice to create and edit the documentation files. 
-   You can also use `Visual Studio Code`_ for a more feature-rich experience.
+*  All you need is `Notepad++`_ or any text editor of your choice to create and edit the documentation files. 
 
-*  If you are using Visual Studio Code, you can select the `wiseEnvironment` Conda environment as your Python interpreter 
-   to ensure that all Sphinx extensions and dependencies are available while editing and previewing your documentation.
+*  You can also use `Visual Studio Code`_ for a more feature-rich experience.
 
-   *  In Visual Studio Code, open the Command Palette (Ctrl+Shift+P) and type "Python: Select Interpreter".
-   *  Choose the interpreter that corresponds to your `wiseEnvironment` Conda environment.
+*  You you already have documentation in other formats, you may convert it using Pandoc_.
 
-   .. todo:: 
+Pandoc
+-----------------
 
-      Link to the section about tools.
+`Pandoc`_ is a free and open-source document converter, available for **Windows, Linux and Mac**.
+
+It can convert files in formats such as HTML, PDF, DOCX, ODT, etc. 
+to and from reStructuredText_ and Markdown_ (including the CommonMark_ flavour supported by Sphinx_ and GitHub_). 
+
+You can use it to convert existing documents to `*.rst` or `*.md` format,
+before editing them with a text or code editor (e.g. Notepad++, Visual Studio Code).
+
+Notepad++
+------------------
+
+`Notepad++`_ is a free source code editor and Notepad replacement that supports several programming languages.  
+It is only available for **Windows**.
+
+reStructuredText and Markdown are not among the languages natively recognised by Notepad++,
+but can be added using a `Notepad++ User Defined Language File`_
+(see install instructions below the list of available language files).
+
+* Follow the link to download the `Notepad++ ReST syntax file`_.
+* Follow the link to download the `Notepad++ Markdown syntax file`_.
+
+.. figure:: img/NotepadPlusPlus.png
+   :alt: This document opened in Notepad++.
+   :width: 50%
+
+
+Visual Studio Code
+-------------------- 
+
+`Visual Studio Code`_ is a open source code editor for **Windows, Linux and Mac**.  
+It has a large number of extensions available, including some for reStructuredText.
+
+If you are using Visual Studio Code, you select the `wiseEnvironment` Conda environment as your Python interpreter 
+to ensure that all Sphinx extensions and dependencies are available while editing and previewing your documentation.
+
+*  In Visual Studio Code, open the Command Palette (Ctrl+Shift+P) and type "Python: Select Interpreter".
+*  Choose the interpreter that corresponds to your `wiseEnvironment` Conda environment.
+
+.. figure:: img/VisualStudioCode.png
+   :alt: This document opened in Visual Studio Code.
+   :width: 50%
+
+Sphinx
+-------------------
+
+`Sphinx`_ is a Python documentation generator.
+
+If your using the `wiseEnvironment` Conda environment, Sphinx_ should already be installed.
+The `wiseEnvironment` includes the `sphinx-autobuild` package, which allows you to automatically rebuild and preview your documentation in a web browser as you edit it (see next section).
+
+..
+   The Sphinx builder can produce a number of output formats (e.g. HTML, PDF).
+   PDF files can be produced using the LaTeX builder (more complicated)
+   or using the direct PDF builder called rst2pdf (see below).
+..
 
 
 Building documentation
 ================================== 
-
 
 Before building the documentation, ensure your Conda environment is activated:
 
@@ -177,7 +230,7 @@ Your documentation will now be publicly accessible at `https://<your-username>.g
       Make sure that your WISE project manager is aware of the publication and has approved the content,
       specially is it is being published in an organisational repository.
 
-   
+
 .. links-placeholder
 
 .. include:: ../_sharedFiles/Links.rst

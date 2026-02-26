@@ -33,7 +33,8 @@
 .. _MyST: https://myst-parser.readthedocs.io/en/latest/
 
 .. _Notepad++: https://notepad-plus-plus.org/
-.. _Notepad++ User Defined Language File: https://github.com/notepad-plus-plus/userDefinedLanguages
+.. _Notepad++ User Defined Languages Collection: https://github.com/notepad-plus-plus/userDefinedLanguages
+.. _Notepad++ Markdown syntax file: https://github.com/Edditoria/markdown-plus-plus
 .. _Notepad++ ReST syntax file: https://github.com/steenhulthin/reStructuredText_NPP
 
 .. _Pandoc: https://pandoc.org/
@@ -48,6 +49,7 @@
 .. _Sphinx's reStructuredText Primer: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
 
 .. _sphinxcontrib-bibtex: https://pypi.org/project/sphinxcontrib-bibtex/ 
+.. _sphinxcontrib-mermaid: https://pypi.org/project/sphinxcontrib-mermaid/
 .. _sphinx.ext.graphviz: https://www.sphinx-doc.org/en/master/usage/extensions/graphviz.html
 .. _sphinx-plantuml: https://pypi.org/project/sphinx-plantuml/
 

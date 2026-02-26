@@ -13,6 +13,8 @@ The WISE Documentation is organized into three main sections:
 
 * **Getting Started**: 
 
+  *You only need to read this, if you are setting up your work environment for the first time.* 
+
   This section provides instructions on how to set up the WISE environment and get started with the documentation.
 
 * **Technical documentation**: 
@@ -29,17 +31,15 @@ The WISE Documentation is organized into three main sections:
 
 
 .. toctree:: 
-   :maxdepth: 3
-   :caption: Table of Contents:
+   :maxdepth: 2
+   :caption: Chapters:
    
    GettingStarted/index
    On_TechnicalDocumentation/index
    On_VersionControl/index
 
-
-
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Miscellanea:
-   
+      
    Notebook/index

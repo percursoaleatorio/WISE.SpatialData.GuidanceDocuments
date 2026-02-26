@@ -28,7 +28,7 @@
 
    
 What is reStructuredText?
-*******************************************
+=========================
 
 .. note::
 
@@ -51,14 +51,9 @@ There are two types of markup:
    for example, ``*the surrounding asterisks would mark this text as italics*``, like *this*.
 
 *  **explicit markup**: 
-   is used for text that need special handling,
+   is used for blocks of text that need special handling,
    such as footnotes, tables, or generic directives.
-   Explicit markup blocks always start with ``..`` followed by whitespace.
-
-   .. admonition:: This is a style convention.   
-
-      The **style conventions** proposed in this page
-      should be followed to ensure a consistent style across the documentation.
+   Explicit markup always starts with ``..`` followed by whitespace.
 
 
 .. contents:: On this page...
@@ -71,47 +66,23 @@ There are two types of markup:
 Paragraphs
 ==========
 
-The paragraph is the basic block in a reST document.
-
 Paragraphs are simply chunks of text separated by one or more blank lines.
-
-Indentation is significant in reST,
-so all lines of the same paragraph
+All lines of the same paragraph
 must be left-aligned to the same level of indentation.
 
-   .. admonition:: This is a style convention.
-
-      Try to keep each line with a maximum of 78 characters.
-      Remember that changing to next line does not create a paragraph,
-      unless the chunks of text is separated by a blank line.
-      
-      Try to keep each phrase in a different line.
-      It improves readability 
-      and facilitates the translation process.
-      
-      Remember that consecutive blank lines 
-      will be ignored in the HTML output.
-   
-Quoted paragraphs
------------------
-
-Quoted paragraphs are created by
+**Quoted paragraphs** are created by
 just indenting them more than the surrounding paragraphs::
 
    Normal paragraph.
       
       Indented paragraph.
 
-.. admonition:: This is a style convention.
+.. tip:: 
 
    Each indentation level is created with 3 whitespaces.
    Do not use tabs.
-         
-Line breaks
------------
 
-Line blocks are a way of preserving line breaks
-(the equivalent of using ``Shift+Enter`` to break a line in Microsoft Word)::
+Line blocks are a way of preserving **line breaks**::
 
    | the sweet & aged people
    | who rule this world(and me and
@@ -130,14 +101,12 @@ Here is the result of the above markup:
 Sections
 ========
 
-Section are created by underlining (and optionally overlining)
-the section title with a punctuation character::
+Section are created by underlining the title with a punctuation character::
 
    This is a heading
    =================
 
-Any punctuation character can be used to define a section title.
-The underlining (and overlining) must be at least as long as the text itself.
+The underlining must be at least as long as the text itself.
 Sections must be properly nested.
 
    .. admonition:: This is a style convention.
@@ -151,49 +120,35 @@ Sections must be properly nested.
       *  ``^`` for subsubsections ("Heading 3")
       *  ``"`` for paragraphs ("Heading 4")
 
-      Please note that, 
-      when converting to ``HTML`` format, 
-      sections are automatically converted to an appropriate heading tag 
+      When converting to HTML format, 
+      sections are converted to an appropriate heading tag 
       (for example: ``<h2>Heading text</h2>``).
       
-      When converting to ``ODT`` or ``DOCX``, 
+      When converting to ODT or DOCX, 
       an appropriate Heading style is applied.
 
 .. _rst-inlinemarkup-ref:
 
-Inline markup
-=============
-
-Bold, italics, monospace
-------------------------
+Bold, italics, and other inline markup
+==================================================
 
 The markup is quite simple:
 
-*  use one asterisk for italics: ``*text*``
-   (the equivalent of using ``Ctrl+i`` in Microsoft Word or LibreOffice Writer),
-*  use two asterisks for strong emphasis (boldface): ``**text**``
-*  use backquotes for text literals: ````text````
+*  use one asterisk for *italics*: ``*text*``
+*  use two asterisks for **bold**: ``**text**``
+*  use backquotes for text ``literals``: ````text````
+* Subscript is marked with ``:sub:`subscript text```.
+* Superscript is marked with ``:sup:`superscript text```.
 
-Be aware of some restrictions:
+There are some restrictions:
 
 *  The markup may not be nested.
-   For example, this markup is wrong: ``*italics with **bold** inside*``
+   For example, this is wrong: ``*italics with **bold** inside*``
 *  The text content within the markup may not start or end with whitespace.
-   For example, this markup is wrong: ``* text*``
-
-*  The markup must be separated from surrounding text
-   by non-word characters (whitespace or punctuation).
+   For example, this is wrong: ``* text*``
+*  The markup must be separated from surrounding text by whitespace or punctuation.
    Use a backslash-escaped-space to work around that.
    For example: ``thisis\ *one*\ word`` is rendered like thisis\ *one*\ word.
-*  If asterisks or backquotes appear in running text
-   and could be confused with inline markup delimiters,
-   they must be escaped with a backslash.
-
-Subscript and superscript
--------------------------
-
-Subscript is marked with ``:sub:`subscript text```.
-Superscript is marked with ``:sup:`superscript text```.
 
    .. tip:: 
 
@@ -211,7 +166,7 @@ Superscript is marked with ``:sup:`superscript text```.
          
          .. |H2O| replace:: H\ :sub:`2`\ O
       
-      Keep all substitutions together (e.g. at the end of the file).
+      Keep all substitutions together (e.g. at the end of the file or in a separate file).
       
 .. _rst-lists-ref:
 
@@ -559,7 +514,7 @@ but it is intuitive enough when you write it.)
 .. _rst-directives-ref:
 
 Directives
-----------
+==========
 
 A directive is a generic block of explicit markup.
 
@@ -623,7 +578,7 @@ Docutils_ supports the following directives:
 .. _rst-contents-ref:
 
 Table of contents
------------------
+====================
 
 To include a table of contents within a given document,
 use the directive ``contents``.
@@ -771,16 +726,8 @@ An ``xlsx-table`` can also be used::
       :sheet: table1
       :header-rows: 1
       
-Using Excel tables requires an additional module `sphinxcontrib.xlsxtable`
-that is an extension for Sphinx, that adds support for including spreadsheets, or part of them, into Sphinx document.
-It can be installed using pip::
+Using Excel tables requires an additional module `sphinxcontrib.xlsxtable`.
 
-   pip install sphinxcontrib-xlsxtable
-
-Then the project ``conf.py`` file needs to be updated::
-
-   # Add ``sphinxcontrib.xlsxtable`` into extension list
-   extensions = ['sphinxcontrib.xlsxtable']
 
 .. _rst-footnotes-ref:
 
@@ -892,19 +839,20 @@ You can indent text after a comment start to form multiline comments::
       is a comment.
 
       Still in the comment.
+   ..
 
-   .. hint:: This is a style convention.
-         
-      Comments can also be used as placeholders 
-      to mark places within the document. 
-      For example:
+.. admonition:: This is a style convention.
+      
+   Comments can also be used as placeholders 
+   to mark places within the document. 
+   For example:
 
-      *  the ``.. links-placeholder`` can mark the place 
-         where hyperlinks are kept together at the end of the document;
-         
-      *  the ``.. metadata-placeholder`` can mark the place 
-         where document metadata (author, date, etc) 
-         is kept together at the beginning of the document.
+   *  the ``.. links-placeholder`` can mark the place 
+      where hyperlinks are kept together at the end of the document;
+      
+   *  the ``.. metadata-placeholder`` can mark the place 
+      where document metadata (author, date, etc) 
+      is kept together at the beginning of the document.
    
 .. links-placeholder
 
