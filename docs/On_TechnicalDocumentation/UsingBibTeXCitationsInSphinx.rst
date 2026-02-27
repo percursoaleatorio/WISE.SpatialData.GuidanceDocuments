@@ -150,7 +150,7 @@ including an entry for:
 
 .. topic:: Using the Sphinx Thesis Resource
 
-   See also http://jterrace.github.io/sphinxtr/html/ch-intro/index.html
+   See also the `Sphinx Thesis Resource`_
    for various useful adaptations/extensions of Sphinx.
 
 Using LaTeX directly in Sphinx

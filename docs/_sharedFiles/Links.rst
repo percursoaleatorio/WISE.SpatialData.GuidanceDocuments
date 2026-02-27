@@ -52,6 +52,7 @@
 .. _sphinxcontrib-mermaid: https://pypi.org/project/sphinxcontrib-mermaid/
 .. _sphinx.ext.graphviz: https://www.sphinx-doc.org/en/master/usage/extensions/graphviz.html
 .. _sphinx-plantuml: https://pypi.org/project/sphinx-plantuml/
+.. _Sphinx Thesis Resource: https://jterrace.github.io/sphinxtr/
 
 .. _Version Control: https://en.wikipedia.org/wiki/Version_control
 .. _Visual Studio Code: https://code.visualstudio.com/

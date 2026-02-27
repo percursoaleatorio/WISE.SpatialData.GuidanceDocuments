@@ -93,6 +93,7 @@ reStructuredText
    :maxdepth: 2
       
    OnReStructuredText
+   UsingTables
    ShowingCodeExamplesInSphinx
    UsingGraphicsAndDiagramsInSphinx
    UsingMathEquationsInSphinx

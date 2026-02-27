@@ -335,50 +335,6 @@ docutils_ recognises a number of Bibliographic Fields
 ``organization``, ``contact``, ``version``, ``status``, 
 ``date``, ``copyright``, ``field``, ``topic``).
 
-      
-.. _rst-tables-ref:
-
-Tables
-======
-
-The reStructuredText markup supports two basic types of tables.
-For *grid tables*,
-you have to "paint" the cell grid yourself.
-They look like this::
-
-   +------------------------+------------+----------+----------+
-   | Header row, column 1   | Header 2   | Header 3 | Header 4 |
-   | (header rows optional) |            |          |          |
-   +========================+============+==========+==========+
-   | body row 1, column 1   | column 2   | column 3 | column 4 |
-   +------------------------+------------+----------+----------+
-   | body row 2             | ...        | ...      |          |
-   +------------------------+------------+----------+----------+
-
-*Simple tables* are easier to write, but limited:
-they must contain more than one row,
-and the first column cannot contain multiple lines.
-They look like this::
-
-   =====  =====  =======
-   A      B      A and B
-   =====  =====  =======
-   False  False  False
-   True   False  False
-   False  True   False
-   True   True   True
-   =====  =====  =======
-
-.. tip:: This is a tip.
-
-   These are the basic types of tables, which are rather clumsy. 
-   Also available (and easier to use) are :ref:`special tables <rst-specialtables-ref>`, 
-   namely list-tables and CSV-tables.
-   
-   An xlsxtable_ extension can also be used with Sphinx_.
-   It allows the inclusion of EXCEL or ODS spreadsheets, 
-   or part of them, into a reST document.
-
 .. _rst-hyperlinks-ref:
 
 Hyperlinks
@@ -448,9 +404,6 @@ There are two ways in which you can refer to labels:
    A reference like ``:ref:`my-figure-ref``` 
    would insert a reference to the figure
    with link text "My figure caption".
-
-   The same works for :ref:`tables <rst-specialtables-ref>` 
-   that are given an explicit caption using the ``table`` directive.
 
 *  Labels that aren't placed before a section title can still be referenced
    to, but you must provide the text for the link, using this syntax:
@@ -539,7 +492,7 @@ Options are given in the lines immediately following the arguments
 and are indicated by the colons.
 Options must be indented to the same level as the directive content.
 
-Docutils_ supports the following directives:
+Docutils_ supports the many directives (not all are listed below!):
 
 *  Admonitions: ``attention``, ``caution``, ``danger``,
    ``error``, ``hint``, ``important``, ``note``,
@@ -562,12 +515,6 @@ Docutils_ supports the following directives:
    *  ``epigraph`` - a block quote with optional attribution line;
    *  ``container`` -   a container with a custom class,
       useful to generate an outer ````<div>```` in HTML output.
-
-*  :ref:`rst-specialtables-ref`:
-
-   *  ``table``   -  a table with title;
-   *  ``csv-table``  -  a table generated from comma-separated values;
-   *  ``list-table`` -  a table generated from a list of lists.
 
 *  Special directives:
 
@@ -664,62 +611,6 @@ and an optional legend (arbitrary body elements)::
 There must be blank lines before the caption paragraph and before the legend.
 To specify a legend without a caption,
 use an empty comment (``..``) in place of the caption.
-  
-
-.. _rst-specialtables-ref:
-
-Special tables
---------------
-
-The ``table`` directive associates a title with the following table::
-
-   .. table:: User list
-
-      ==========  =========
-      First name  Last name
-      ==========  =========
-      John        Doe
-      Jane        Dove
-      ==========  =========
-
-A ``list-table`` is created from a uniform two-level bullet list::
-
-   .. list-table:: User list
-      :header-rows:1
-      
-      *  - First name
-         - Last name
-      *  - John
-         - Doe
-      *  - Jane
-         - Dove
-
-A ``csv-table`` is created from comma-separated values
-(either in the document or in an external file)::
-
-   .. csv-table:: User list
-      :header:"First name","Last name"
-      
-      "John","Doe"
-      "Jane","Dove"
-      
-Another example of ``csv-table``, using and external file::
-
-   .. csv-table:: Table 1 - Legend of the table goes here...
-      :header-rows: 1
-      :stub-columns: 1
-      :file: ../tables/table1.csv
-      
-
-An ``xlsx-table`` can also be used::
-
-   .. xlsxtable:: Table 1 - Legend of the table goes here...
-      :file: ../tables/tables.xlsx
-      :sheet: table1
-      :header-rows: 1
-      
-Using Excel tables requires an additional module `sphinxcontrib.xlsxtable`.
-
 
 .. _rst-footnotes-ref:
 
